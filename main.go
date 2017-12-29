@@ -57,10 +57,9 @@ func createInfluxClient(config map[string]interface{}) client.Client {
 		password = os.Getenv("INFLUX_PASSWORD")
 	}
 	c, err := client.NewHTTPClient(client.HTTPConfig{
-		Addr:               host,
-		Username:           username,
-		Password:           password,
-		InsecureSkipVerify: true,
+		Addr:     host,
+		Username: username,
+		Password: password,
 	})
 	checkError(err)
 	return c

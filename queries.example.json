@@ -1,0 +1,18 @@
+{
+  "queries": [
+    {
+      "tags": {
+        "name": "tohandle",
+        "description": "New or Request"
+      },
+      "jql": "type = Request AND status != Done OR status = New"
+    },
+    {
+      "tags": {
+        "name": "opensre",
+        "description": "Open Support Tickets"
+      },
+      "jql": "labels in (Support) and resolution = Unresolved"
+    }
+  ]
+}
